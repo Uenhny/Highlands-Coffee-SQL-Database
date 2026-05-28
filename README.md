@@ -19,7 +19,8 @@ Unlike standard clean datasets, real-world data often contains units mixed with 
 ```sql
 SELECT SUM(Price * TRY_CAST(REPLACE(REPLACE(Quantity, 'Kg', ''), 'hộp', '') AS INT)) AS Total_Revenue
 FROM dbo.Product, dbo.Ingredient
-WHERE Ingredient.Ingredient_ID = Product.Ingredient_ID
+WHERE Ingredient.Ingredient_ID = Product.Ingredient_ID;
+```
 
 ## Entity-Relationship Diagram (ERD)
 ![ERD Highlands Coffee](erd_highlands.png)
